@@ -1,0 +1,37 @@
+from Categories_create_query import create_categories_query
+from Customers_create_query import create_customers_query
+from Employees_create_query import create_employees_query
+from Inventory_create_query import create_inventory_query
+from OrderDetails_create_query import create_order_details_query
+from Orders_create_query import create_orders_query
+from ProductReviews_create_query import create_product_reviews_query
+from Products_create_query import create_products_query
+from Shipment_create_query import create_shipment_query
+from Suppliers_create_query import create_suppliers_query
+
+categories_count = 11
+create_categories_query(categories_count)
+
+customers_count = 101
+create_customers_query(customers_count)
+
+count_employees = 10
+create_employees_query(count_employees)
+
+suppliers_count = 123
+create_suppliers_query(suppliers_count)
+
+products_count = 1001
+create_products_query(products_count, categories_count, suppliers_count)
+create_inventory_query(products_count)
+
+orders_count = 501
+create_orders_query(orders_count, customers_count)
+create_order_details_query(orders_count)
+
+product_reviews_count = 44
+create_product_reviews_query(product_reviews_count, products_count, customers_count)
+
+shipment_count = 45
+create_shipment_query(shipment_count, orders_count)
+
