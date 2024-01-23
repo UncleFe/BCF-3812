@@ -4,13 +4,13 @@ def create_orders_query(orders_count, customers_count):
     file_path = 'C:\\Python\\BCF-3812\\Queries\\Orders_sql_query.txt'
 
     with open(file_path, 'w') as file:
-        file.write(f'"INSERT INTO Categories (OrderID, CustomerID, OrderDate, Status) VALUES"\n')
+        file.write(f'INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status) VALUES\n')
 
     with open(file_path, 'a') as file:        
         status_list = ['Open', 'InProgress', 'Close']
         for i in range(1, orders_count):
             order_id = i
-            customer_id = random.randint(1, customers_count)
+            customer_id = random.randint(1, customers_count-1)
             order_date = '2024-01-12'
             if i>100 and i<=200:
              order_date = '2024-01-22'
@@ -23,9 +23,9 @@ def create_orders_query(orders_count, customers_count):
             order_status = random.choice(status_list)
 
             if(i+1<orders_count):
-                query = f"({order_id}, {customer_id}, {order_date}, {order_status}),\n"
+                query = f"({order_id}, {customer_id}, {order_date}, '{order_status}'),\n"
             else:
-                query = f"({order_id}, {customer_id}, {order_date}, {order_status});\n"
+                query = f"({order_id}, {customer_id}, {order_date}, '{order_status}');\n"
         
             file.write(query)
 

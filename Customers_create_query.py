@@ -2,7 +2,7 @@ def create_customers_query(customers_count):
     file_path = 'C:\\Python\\BCF-3812\\Queries\\Customers_sql_query.txt'
 
     with open(file_path, 'w') as file:
-        file.write(f'"INSERT INTO Customers (CustomerID, Name, ContactInfo) VALUES"\n')
+        file.write(f'INSERT INTO Customers (CustomerID, Name, ContactInfo) VALUES\n')
 
 
     with open(file_path, 'a') as file:

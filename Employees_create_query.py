@@ -3,7 +3,7 @@ def create_employees_query(count_employees):
     file_path='C:\\Python\\BCF-3812\\Queries\\Employees_sql_query.txt'
 
     with open(file_path, 'w') as file:
-        file.write(f'"INSERT INTO Employees (EmployeeID, Name, LastName, Position) VALUES"\n')
+        file.write(f'INSERT INTO Employees (EmployeeID, Name, LastName, Position) VALUES\n')
 
     with open(file_path, 'a') as file:        
         position_employees =['Worker', 'Bad worker', 'Good worker']

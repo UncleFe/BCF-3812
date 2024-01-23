@@ -2,7 +2,7 @@ def create_categories_query(categories_count):
     file_path = 'C:\\Python\\BCF-3812\\Queries\\Categories_sql_query.txt'
 
     with open (file_path, 'w') as file:
-        file.write(f'"INSERT INTO Categories (CategoryID, Name) VALUES"\n')
+        file.write(f'INSERT INTO Categories (CategoryID, Name) VALUES\n')
 
     with open(file_path, 'a') as file:
         

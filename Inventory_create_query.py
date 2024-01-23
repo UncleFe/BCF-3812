@@ -4,7 +4,7 @@ def create_inventory_query(products_count):
     file_path = 'C:\\Python\\BCF-3812\\Queries\\Inventory_sql_query.txt'
 
     with open(file_path, 'w') as file:
-        file.write(f'"INSERT INTO Inventory (ProductID, Quantity) VALUES"\n')
+        file.write(f'INSERT INTO Inventory (ProductID, Quantity) VALUES\n')
 
     with open(file_path, 'a') as file:
         for i in range(1, products_count):
